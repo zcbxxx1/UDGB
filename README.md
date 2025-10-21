@@ -9,6 +9,25 @@
 
 ---
 
+### PYTHON HELPER SCRIPT
+
+If you only need the processed Windows Mono support archive for a specific
+Unity version (for example `6000.0.58f2`), a standalone Python helper is
+available at `scripts/download_unity_windows_mono.py`. It replicates UDGB's
+behaviour: downloading the macOS installer that bundles the Windows Mono
+support files, extracting the managed assemblies, and packaging them into a
+flattened ZIP archive.
+
+```bash
+python scripts/download_unity_windows_mono.py 6000.0.58f2 -o 6000.0.58.zip
+```
+
+The script requires Python 3.8+ and a working `7z` executable (from 7-Zip or
+p7zip). Use the `--seven-zip` option or the `SEVEN_ZIP` environment variable if
+`7z` is not on your `PATH`.
+
+---
+
 ### LICENSING & CREDITS:
 
 UDGB is licensed under the Apache License, Version 2.0. See [LICENSE](https://github.com/LavaGang/UDGB/blob/master/LICENSE.md) for the full License.
